@@ -34,3 +34,61 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+.container{
+  max-width: 1840px;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+.header{
+  padding-block-start: 36px;
+  background-color: black;
+}
+
+.flex-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__list{
+  display: flex;
+  gap: 61px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list__item-lick{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.side__nuv{
+  padding-block-end: 8px;
+  border-bottom: 0.4px solid rgba(255, 255, 255, 0.52);
+}
+
+.side__list{
+  display: flex;
+  align-items: center;
+  gap: 46px;
+  flex-wrap: wrap;
+}
+
+.side__list-item button{
+  font-family: 'Montserrat';
+  background-color: transparent;
+  color: #FFFFFF;
+  border: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
