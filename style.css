@@ -34,6 +34,37 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+.main__btn{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  border:   1.5px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.main__btn::after{
+  content: "";
+  background-image: url(./public/images/arrov.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-inline-start: 40px;
+}
+
+.haero__btn-size{
+  padding: 29px 81px;
+}
+
+.services__btn-size{
+  padding: 29px 64px;
+}
+
 .container{
   max-width: 1840px;
   padding-inline: 1rem;
@@ -131,7 +162,12 @@ body{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 260px;
+  gap: 133px;
+}
+
+.hero__list>*+*{
+  border-left: 1px solid rgba(255, 255, 255, 0.43);
+  padding-inline-start: 133px;
 }
 
 .hearo__list-item{
