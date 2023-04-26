@@ -164,3 +164,56 @@ body{
   border-bottom: 1px solid rgba(255, 255, 255, 0.52);
 }
 
+.services{
+  background-image: url(./public/images/hearo/hearo-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: rotate(152deg);
+  /* filter: blur(92px); */
+}
+
+.services__box{
+  padding-block: 182px 160px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services__info-title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 138px;
+  line-height: 101.4%;
+  color: #FFFFFF;
+  max-width: 777px;
+  padding-block-end: 264px;
+}
+
+.types__list{
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  text-align: left;
+  justify-content: start;
+}
+
+.types__list-item a{
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.services__types{
+  min-width: 800px;
+}
+
+.types__list-item{
+  padding-block-end: 34px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+}
