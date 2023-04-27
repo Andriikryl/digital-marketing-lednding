@@ -8,6 +8,7 @@ li{
 
 * {
   margin: 0;
+  padding: 0;
 }
 html, body {
   height: 100%;
@@ -252,4 +253,111 @@ body{
 .types__list-item{
   padding-block-end: 34px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.38);
+}
+
+.case{
+  background-image: url(./public/images/hearo/hearo-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: rotate(152deg);
+  padding-block-end: 100px;
+}
+
+.case__nav{
+  padding-block: 175px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case__title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 101.4%;
+  color: #FFFFFF;
+}
+
+.case__slides{
+  --gap: 2rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  padding-inline-start: 300px;
+}
+
+.case__slides::-webkit-scrollbar {
+  inline-size: 0 !important;
+  display: none;
+}
+
+.case__slides-content{
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap); 
+}
+
+.case__slides-content::after {
+  content: "";
+  align-self: stretch;
+  padding-inline-end: max(
+    var(--space),
+    (100vw - var(--content-max-width)) / 2 - var(--space)
+  );
+}
+
+
+.product{
+  max-width: 394px;
+  background: #0D0D0D;
+  border: 0.1px solid #FFFFFF;
+  padding: 47px;
+}
+.product__prev{
+  display: flex;
+  gap: 29px;
+  padding-block-end: 77px;
+}
+
+.product__prev-title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  max-width: 216px;
+}
+
+.product__list{
+  display: flex;
+  flex-direction: column;
+  gap: 33px;  
+  padding-block-end: 20px;
+}
+
+.product__list-item{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+}
+
+.product__list-item span {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
 }
