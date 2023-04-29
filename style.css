@@ -338,10 +338,11 @@ body{
 }
 
 .product__list{
-  display: flex;
-  flex-direction: column;
-  gap: 33px;  
-  padding-block-end: 20px;
+  display: grid;
+  grid-template-columns: auto; /* The default, but best to be explicit */
+  gap: 33px;
+  grid-auto-columns: 1fr;
+  margin-block-end: 30px;
 }
 
 .product__list-item{
@@ -351,6 +352,9 @@ body{
   font-size: 12px;
   line-height: 15px;
   color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  grid-column-start: 1;
 }
 
 .product__list-item span {
@@ -361,3 +365,4 @@ body{
   line-height: 15px;
   color: #FFFFFF;
 }
+
