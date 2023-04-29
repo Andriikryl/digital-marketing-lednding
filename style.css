@@ -308,10 +308,6 @@ body{
 .case__slides-content::after {
   content: "";
   align-self: stretch;
-  padding-inline-end: max(
-    var(--space),
-    (100vw - var(--content-max-width)) / 2 - var(--space)
-  );
 }
 
 
@@ -366,3 +362,79 @@ body{
   color: #FFFFFF;
 }
 
+.cooperation{
+  background-image: url(./public/images/hearo/hearo-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: rotate(152deg);
+  padding-block-end: 100px;
+}
+
+.cooperation__prevu{
+  padding-block: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cooperation__titel{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 105px;
+  line-height: 89.9%;
+  color: #FFFFFF;
+}
+
+.cooperation__info{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 30px;
+  color: #FFFFFF;
+  max-width: 803px;
+}
+
+.cooperation__steps{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 300px;
+}
+
+.steps__list{
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+
+.steps__number{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 101.4%;
+  color: #FFFFFF;
+}
+  .steps__name{
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 101.4%;
+  color: #FFFFFF;
+  max-width: 560px;
+  }
+
+  .steps__description{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 101.4%;
+    color: #FFFFFF    ;
+    max-width: 560px;
+  }
