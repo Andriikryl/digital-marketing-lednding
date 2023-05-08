@@ -293,7 +293,7 @@ body{
 }
 
 .case__slides::-webkit-scrollbar {
-  inline-size: 0 !important;
+  inline-size: 0;
   display: none;
 }
 
@@ -535,4 +535,122 @@ color: #FFFFFF;
   to {
     transform: translateY (calc(-100% - 21px)) ;
   }
+}
+
+
+.news{
+  background-image: url(./public/images/hearo/hearo-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: rotate(152deg);
+  padding-block: 140px;
+}
+.news__text{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block-end: 130px;
+}
+
+.news__title{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+font-size: 83px;
+line-height: 89.9%;
+color: #FFFFFF;
+}
+
+.news__text-description{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 101.4%;
+  color: #FFFFFF;
+  max-width: 1200px;
+}
+
+.news__box {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(
+    ( to right),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 20%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+.news__box li{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 101.4%;
+  text-align: right;
+  color: #FFFFFF;
+  max-width: 369px;
+}
+
+.news__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: news-x 20s linear infinite;
+  margin-inline-end: 20px;
+}
+
+@keyframes news-x {
+  from {
+    transform: translateX (0);
+  }
+  to {
+    transform: translateX(calc(-100% - 21px));
+  }
+}
+
+.news__group:is([data-diraction="right"]){
+  animation-direction: reverse;
+}
+
+
+.news__galary{
+  --gap: 2rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  padding-inline-start: 100px;
+}
+
+.galary__list{
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  padding-block: 50px;
+}
+
+.galary__list-item{
+  max-width: 398px;
+}
+
+.galary__list-item img{
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.news__galary::-webkit-scrollbar {
+  inline-size: 0;
+  display: none;
 }
