@@ -438,3 +438,50 @@ body{
     color: #FFFFFF    ;
     max-width: 560px;
   }
+
+  .detail__name{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 101.4%;
+    color: #FFFFFF;
+    max-width: 534px;
+  }
+
+  .detail__description{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 101.4%;
+    color: #FFFFFF;
+    max-width: 567px;
+  }
+
+  .detail__flex-grup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.29);
+    padding-block: 61px;
+  }
+.detail__flex-name{
+  display: flex;
+  gap: 206px;
+}
+
+.detail__flex-name span{
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 101.4%;
+color: #FFFFFF;
+}
+
+.derail__box{
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 300px;
+}
