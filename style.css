@@ -1,3 +1,12 @@
+:root {
+  --border: 1px dashed var(--surface-3);
+  --shadow: 0 0 0.5rem hsla(0 0% 0% / 0.1);
+  --space: 1rem;
+  --surface-1: hsl(0 0% 98%);
+  --surface-2: hsl(0 0% 90%);
+  --surface-3: hsl(0 0% 68%);
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -5,7 +14,9 @@
 li{
   list-style: none;
 }
-
+a{
+  text-decoration: none;
+}
 * {
   margin: 0;
   padding: 0;
@@ -72,58 +83,167 @@ body{
   margin-inline: auto;
 }
 
+/* HEADER */
+
 .header{
-  padding-block-start: 36px;
-  background-color: black;
+  padding-block: 55px;
+  background-color: #0D0D0D;
 }
 
-.flex-group{
+.header__nav{
+  display: flex;
+  gap: 300px;
+  align-items: center;
+}
+.sub__box-nav{
+  display: flex;
+  gap: 64px;
+border-bottom: 0.4px solid rgba(255, 255, 255, 0.52);
+padding-block-end: 8px;
+}
+
+.sub__box-nav button{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;  
+}
+
+.header__box{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navigation__list{
+  .header__list{
   display: flex;
-  gap: 61px;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 35px;
 }
 
-.list__item-lick{
+.header__link{
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  display: flex;
-  align-items: center;
   color: #FFFFFF;
-  text-decoration: none;
+  transition: 500ms ease-in;
 }
 
-.side__nuv{
-  padding-block-end: 8px;
-  border-bottom: 0.4px solid rgba(255, 255, 255, 0.52);
-}
 
-.side__list{
-  display: flex;
-  align-items: center;
-  gap: 46px;
-  flex-wrap: wrap;
-}
+/**MOBILE-ADAPTIVE**/
 
-.side__list-item button{
-  font-family: 'Montserrat';
-  background-color: transparent;
-  color: #FFFFFF;
+
+.burger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+  display: none;
   border: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 30;
 }
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger--active .burger__line {
+  opacity: 0;
+}
+
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.burger--active::after {
+  bottom: auto;
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 1450px) {
+  .burger {
+    display: block;
+  }
+  .header__nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(29.5px);
+    width: 90%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in-out;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav--visible {
+  transform: none;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 0;
+}
+
+
+.header__list {
+  --index: calc(1vw + 1vh);
+    flex-direction: column;
+    padding: calc(var(--index) * 3) calc(var(--index) * 7.5);
+    flex-direction:
+     column;
+    align-items: flex-start;
+}
+}
+
+
+
+
+
+/* HEARO */
 
 .hearo{
   background-image: url(./public/images/hearo/hearo-bg.png);
@@ -752,3 +872,27 @@ color: #FFFFFF;
   transform: rotate(-6.48deg);
   padding-block-start: 20px;
 }
+
+.footer{
+  background-color: #0D0D0D;
+  padding-block: 50px;
+}
+
+.footel__links{
+  display: flex;
+  align-items: center;
+  gap: 111px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.links__item a{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 39px;
+  color: #FCFCFC;
+}
+
+
