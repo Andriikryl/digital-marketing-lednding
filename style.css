@@ -654,3 +654,101 @@ color: #FFFFFF;
   inline-size: 0;
   display: none;
 }
+
+
+.contact{
+  padding-block-end: 60px;
+  background-color: #0D0D0D;
+}
+
+.contact__box{
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(
+    ( to right),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 20%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+.contact__list{
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: contact 30s linear infinite;
+  margin-inline-end: 20px;
+}
+
+.contact__list-item{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 97px;
+  line-height: 89.9%;
+  color: #FFFFFF;
+}
+
+@keyframes contact {
+  from {
+    transform: translateX (0);
+  }
+  to {
+    transform: translateX(calc(-100% - 21px));
+  }
+}
+
+.link__box{
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid #FFFFFF;
+  backdrop-filter: blur(29.5px);
+  border-radius: 47px;
+  transform: rotate(-6.48deg);
+  max-width: 613px;
+  padding: 34px 49px;
+  margin-inline: auto;
+  position: relative;
+}
+
+.link__box::after{
+  content: "";
+  background-image: url(./public/images/contact/click.png);
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 98px;
+  height: 129px;
+  position: absolute;
+  right: 0;
+  transform: rotate(-3.06deg);
+}
+
+.contact__link{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 101.4%;
+  text-align: right;
+  text-decoration-line: underline;
+  color: #FFFFFF;  
+  transform: rotate(-6.48deg);
+  position: relative;
+}
+
+.contact__link-sub-text{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 101.4%;
+  text-align: center;
+  color: #FFFFFF;
+  transform: rotate(-6.48deg);
+  padding-block-start: 20px;
+}
